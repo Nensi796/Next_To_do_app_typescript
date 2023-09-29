@@ -1,0 +1,117 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+@media only screen and (max-width: 950px) {
+  .test {
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+}
+.cl-custom-check-first,
+.cl-custom-check-second,
+.cl-custom-check-third {
+  display: none;
+}
+
+.cl-custom-check-first+.cl-custom-check-first-label{
+  /* Unchecked style  */
+  border: 2px solid #df3939;
+  color: #df3939;;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+}
+.cl-custom-check-second+.cl-custom-check-second-label{
+  /* Unchecked style  */
+  border:2px solid #33fc05;
+  color: #33fc05;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+}
+.cl-custom-check-third+.cl-custom-check-third-label {
+  /* Unchecked style  */
+  border:2px solid #fbce1a;
+  color: #fbce1a;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+}
+
+.cl-custom-check-first:checked+.cl-custom-check-first-label{
+  /* Checked style  */
+  background-color: rgb(253, 16, 16);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(360deg);
+  color:white
+}
+.cl-custom-check-second:checked+.cl-custom-check-second-label{
+  /* Checked style  */
+  background-color: #33fc05;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(360deg);
+  color:white
+}
+.cl-custom-check-third:checked+.cl-custom-check-third-label {
+  /* Checked style  */
+  background-color: #fbce1a;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(360deg);
+  color:white
+}
